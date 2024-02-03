@@ -3,7 +3,7 @@ import { TicketDocument } from "@/app/(models)/Tickets";
 
 const getTicketById = async (id: string) => {
 
-    const res = await fetch(`http://localhost:3000/api/Tickets/${id}`, {
+    const res = await fetch(`https://ticketing-app-seven.vercel.app/api/Tickets/${id}`, {
         cache: "no-store"
     });
 
