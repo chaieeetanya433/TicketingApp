@@ -46,7 +46,7 @@ const TicketForm = ({ticket}:TicketFormProps) => {
         e.preventDefault();
 
         if(EDITMODE) {
-            const res = await fetch(`/api/Tickets/${ticket._id}`, {
+            const res = await fetch(`https://ticketing-app-seven.vercel.app/api/Tickets/${ticket._id}`, {
                 method: "PUT",
                 body: JSON.stringify({formData}),
                 headers: {
@@ -59,7 +59,7 @@ const TicketForm = ({ticket}:TicketFormProps) => {
             }
 
         } else {
-            const res = await fetch("/api/Tickets", {
+            const res = await fetch("https://ticketing-app-seven.vercel.app/api/Tickets", {
                 method: "POST",
                 body: JSON.stringify({formData}),
                 headers: {
