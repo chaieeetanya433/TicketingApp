@@ -3,7 +3,7 @@ import { TicketDocument } from "./(models)/Tickets";
 
 const getTickets = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Tickets", {
+    const res = await fetch("https://ticketing-app-seven.vercel.app/api/Tickets", {
       cache: "no-store"
     });
     return res.json() as Promise<{ tickets: TicketDocument[] }>;;
